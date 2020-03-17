@@ -1,0 +1,4 @@
+D:\MES PROJETS\BLAZOR\CRUDBlazor-master (1)\CRUDBlazor-master\CRUDBlazor\obj\Debug\netcoreapp2.2\CRUDBlazor.csprojAssemblyReference.cache
+D:\MES PROJETS\BLAZOR\CRUDBlazor-master (1)\CRUDBlazor-master\CRUDBlazor\obj\Debug\netcoreapp2.2\CRUDBlazor.csproj.CoreCompileInputs.cache
+D:\MES PROJETS\BLAZOR\CRUDBlazor-master (1)\CRUDBlazor-master\CRUDBlazor\obj\Debug\netcoreapp2.2\CRUDBlazor.AssemblyInfoInputs.cache
+D:\MES PROJETS\BLAZOR\CRUDBlazor-master (1)\CRUDBlazor-master\CRUDBlazor\obj\Debug\netcoreapp2.2\CRUDBlazor.AssemblyInfo.cs

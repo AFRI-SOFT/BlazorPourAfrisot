@@ -1,0 +1,57 @@
+﻿@page "/Stock"
+@using CRUDBlazor.Data
+@inject LesStocksService ObjCustomService
+
+<NavLink class="nav-link" href="AddCustomer">
+    <span class="oi oi-plus" aria-hidden="true"></span> Add New
+</NavLink>
+
+<h1>Customer Data</h1>
+@if (objCtmr == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>STOCK ID</th>
+                <th>ARTICLE</th>
+                <th>STOCK</th>
+                
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var temp in objCtmr)
+            {
+                <tr>
+                    <td>@temp.CodeMarchandise</td>
+                    <td>@temp.DesignationMarchandise</td>
+                    <td>@temp.Stock</td>
+                  
+                   
+                    <td>
+                        <a class="nav-link" href="EditCustomer/@temp.CodeMarchandise">
+                            <span class="oi oi-pencil" aria-hidden="true"></span> Edit
+                        </a>
+                        <a class="nav-link" href="DeleteCustomer/@temp.CodeMarchandise">
+                            <span class="oi oi-trash" aria-hidden="true"></span> Delete
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+@code {
+    List<LesStocks> objCtmr;
+    protected override async Task OnInitializedAsync()
+    {
+        LesStocksService objCS = new LesStocksService();
+        objCtmr = await Task.Run(()=> objCS.GetLesStock());
+        //CustomerDataAccessLayer objCustomerDAL = new CustomerDataAccessLayer();
+        //objCtmr = objCustomerDAL.GetAllCustomers().ToList();
+    }
+}
